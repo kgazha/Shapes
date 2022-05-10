@@ -1,6 +1,7 @@
 ﻿using ShapeHelper.Implementations;
 using ShapeHelper.Interfaces;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace ShapeHelper.Tests
@@ -68,6 +69,22 @@ namespace ShapeHelper.Tests
         public void Circle_Throws_Parameters_Exception()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => new CircleWithRadius(-4));
+        }
+
+        [Fact]
+        public void Compute_Square_For_Different_Shapes()
+        {
+            var shapes = new List<IShape>
+            {
+                new CircleWithRadius(4),
+                new TriangleWithEdges(3, 4, 5)
+            };
+
+            foreach (var item in shapes)
+            {
+                var square = item.GetSquare();
+                Assert.True(square > 0);
+            }
         }
     }
 }
