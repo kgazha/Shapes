@@ -1,7 +1,7 @@
 ﻿using ShapeHelper.Interfaces;
 using System;
 
-namespace ShapeHelper.Behaviours
+namespace ShapeHelper.Implementations
 {
     public class TriangleWithBaseAndHeight : ITriangle
     {

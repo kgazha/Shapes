@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace ShapeHelper.Behaviours
+namespace ShapeHelper.Implementations
 {
     public class TriangleWithEdges : ITriangle
     {
